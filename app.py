@@ -77,12 +77,12 @@ st.write(
 
 )
 
-df = pd.read_csv('/content/change in debt.csv',low_memory=False, sep=";", header=0)
+df = pd.read_csv('change in debt.csv',low_memory=False, sep=";", header=0)
 df.rename(columns = {'Tahun':'Year'},inplace = True)
 detail = df
 
 
-economic_indicators = pd.read_csv('/content/economic-indicators.csv',low_memory=False, sep=";", header=0)
+economic_indicators = pd.read_csv('economic-indicators.csv',low_memory=False, sep=";", header=0)
 
 economic_indicators['Nominal Gross Public Debt'] = round(economic_indicators['Debt']/economic_indicators['GDP Current Price']*100,2)
 economic_indicators['Public Debt (in percent of potential GDP)'] = round(economic_indicators['Debt']/economic_indicators['Potensial GDP']*100,2)
@@ -100,8 +100,8 @@ indicators = indic.transpose()
 indicators.reset_index(inplace=True)
 indicators = indicators.rename(columns = {'index':'Indicators'})
 
-bondspread = pd.read_csv('/content/spread.csv',low_memory=False, sep=";", header=0)
-bondratings = pd.read_csv('/content/bondratings.csv',low_memory=False, sep=";", header=0)
+bondspread = pd.read_csv('spread.csv',low_memory=False, sep=";", header=0)
+bondratings = pd.read_csv('bondratings.csv',low_memory=False, sep=";", header=0)
 
 x = df['Year']
 
