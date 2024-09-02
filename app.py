@@ -63,7 +63,7 @@ st.write(
 ''')
 
 ### Get Job_Portal DataFrame
-df_jobs = get_data()
+#df_jobs = get_data()
 
 
 st.write(
